@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 using System.Runtime.Serialization;
 using System.ServiceModel;
 using System.ServiceModel.Web;
@@ -51,7 +52,8 @@ namespace MiWS
             return persona;
         }
         public string CargaConsumo(string USERTOKEN, string ESTACIONID, string CONSUMOSXML){
-            if(!string.IsNullOrEmpty(USERTOKEN) && !string.IsNullOrEmpty(ESTACIONID)&&!string.IsNullOrEmpty(CONSUMOSXML))return "Ok";
+            if(string.IsNullOrEmpty(USERTOKEN) && string.IsNullOrEmpty(ESTACIONID)&&string.IsNullOrEmpty(CONSUMOSXML))return "No se procesó el contenido";
+
             return string.Empty;
         }
     }
