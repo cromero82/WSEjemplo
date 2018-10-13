@@ -11,10 +11,12 @@ namespace MiWS
         public int Edad { get; set; }
         public string Token { get; set; }
     }
-
+    [DataContract]
     public class BaseRespuesta
     {
+        [DataMember]
         public int Error { get; set; }
+        [DataMember]
         public string Mensaje { get; set; }
         public BaseRespuesta()
         {
