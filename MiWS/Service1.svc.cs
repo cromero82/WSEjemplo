@@ -11,8 +11,7 @@ namespace MiWS
     // NOTA: puede usar el comando "Rename" del menú "Refactorizar" para cambiar el nombre de clase "Service1" en el código, en svc y en el archivo de configuración.
     // NOTE: para iniciar el Cliente de prueba WCF para probar este servicio, seleccione Service1.svc o Service1.svc.cs en el Explorador de soluciones e inicie la depuración.
     [Serializable()]
-    public class WSPersonas : IWSPersona
-    {
+    public class WSPersonas : IWSPersona {
         //public string GetData(int value)
         //{
         //    return string.Format("You entered: {0}", value);
@@ -50,6 +49,10 @@ namespace MiWS
                     break;
             }
             return persona;
+        }
+        public string CargaConsumo(string USERTOKEN, string ESTACIONID, string CONSUMOSXML){
+            if(!string.IsNullOrEmpty(USERTOKEN) && !string.IsNullOrEmpty(ESTACIONID)&&!string.IsNullOrEmpty(CONSUMOSXML))return "Ok";
+            return string.Empty;
         }
     }
 }
