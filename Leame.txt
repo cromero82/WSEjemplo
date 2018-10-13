@@ -1,0 +1,8 @@
+1.Creacion WS - Ejemplo base: https://www.youtube.com/watch?v=yKwyhUruFc8&t=1115s 
+2. Build Proyecto MiWS
+3. Ejecutar C:\Program Files (x86)\Microsoft SDKs\Windows\v10.0A\bin\NETFX 4.6 Tools\SvcConfigEditor.exe
+	(La version depende del .NET Framework seleccionado)
+4. EN la aplicacion
+	4.1. Agregar nuevo archivo
+	4.2. Selecionar la dll generada por la solucion (en mi caso C:\Users\USER\source\repos\PruebaWS\MiWS\obj\Debug\MiWS.dll)
+	4.3. Guardar como (se genera xml que debe incluirse en archivo Web.Config (App.config segun sea el proyecto)
